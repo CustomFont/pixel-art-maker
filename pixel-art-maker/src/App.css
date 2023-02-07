@@ -1,0 +1,13 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: beige;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1{
+  text-shadow: 2px 2px 5px red;
+}
+
