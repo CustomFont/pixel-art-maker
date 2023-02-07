@@ -1,9 +1,11 @@
+import { useState } from 'react';
 import '../styles/Grid.css'
 import Square from './Square';
 
 export default function Grid(props) {
     let cols = props.size.x;
     let rows = props.size.y;
+    const [fillClickLocation, setFillClickLocation] = useState({})
     const createGrid = () => {
         let grid = [];
         
@@ -22,8 +24,8 @@ export default function Grid(props) {
         })
     }
     
-    
     let grid = createGrid(cols, rows)
+    
     return(
         <div className="grid-container" >
             {grid}

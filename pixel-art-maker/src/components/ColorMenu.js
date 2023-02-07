@@ -6,6 +6,7 @@ export default function ColorMenu(){
     let localColorContext = useContext(colorContext)
     let setSelectedColor = localColorContext.setSelectedColor;
     let selectedColor = localColorContext.selectedColor;
+    let setBrushOrFill = localColorContext.setBrushOrFill;
     const CSS_COLOR_NAMES = [
         "AliceBlue",
         "AntiqueWhite",
@@ -166,6 +167,10 @@ export default function ColorMenu(){
             <input key="color-picker" type="color" value={selectedColor} onChange={(e) => { setSelectedColor(e.target.value) }}></input>
             <div className="current-color-box">
                 <span>Current Color: </span><div className="current-color-block" style={{ "backgroundColor": selectedColor }}></div>
+            </div>
+            <div className="toolbox">
+                <div classname="brushtool" onClick={()=>{setBrushOrFill("brush")}}>Brush</div>
+                <div classname="filltool" onClick={() => { setBrushOrFill("fill") }}>Fill</div>
             </div>
         </div>
     )

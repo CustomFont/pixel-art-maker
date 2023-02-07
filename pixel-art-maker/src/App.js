@@ -7,8 +7,9 @@ export const colorContext = createContext({})
 function App() {
   const [selectedColor, setSelectedColor] = useState("red");
   const [mouseIsDown, setMouseIsDown] = useState(false)
+  const [brushOrFill, setBrushOrFill] = useState("brush")
   return (
-    <colorContext.Provider value={{selectedColor, setSelectedColor, mouseIsDown}}>
+    <colorContext.Provider value={{ selectedColor, setSelectedColor, mouseIsDown, brushOrFill, setBrushOrFill }}>
       <div className="App" onMouseDown={() => { setMouseIsDown(true)}} onMouseUp={() => { setMouseIsDown(false)}}>
         <h1>Color Picker Pixel Pattern Portal</h1>
         
