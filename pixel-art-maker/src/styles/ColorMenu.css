@@ -31,3 +31,18 @@ button:active, input:active{
 input{
     border-radius: 25%;
 }
+.current-color-box{
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.current-color-block{
+    width:50px;
+    height: 50px;
+    border-radius: 6px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}

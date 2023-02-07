@@ -164,6 +164,9 @@ export default function ColorMenu(){
                 return <button key={`${color}`} onClick={() => { setSelectedColor(`${color}`) }} style={{ "backgroundColor": `${color}` }} ></button>
             })}
             <input key="color-picker" type="color" value={selectedColor} onChange={(e) => { setSelectedColor(e.target.value) }}></input>
+            <div className="current-color-box">
+                <span>Current Color: </span><div className="current-color-block" style={{ "backgroundColor": selectedColor }}></div>
+            </div>
         </div>
     )
 }

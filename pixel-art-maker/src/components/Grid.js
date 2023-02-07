@@ -13,20 +13,20 @@ export default function Grid(props) {
                 grid[col].push({"x":row, "y":col})
             }
         }
-        return grid;
+        return grid.map(col => {
+            return col.map(tile => {
+                return (
+                    <Square key={`${tile.x},${tile.y}`} x={tile.x} y={tile.y} />
+                )
+            })
+        })
     }
     
     
     let grid = createGrid(cols, rows)
     return(
         <div className="grid-container" >
-            {grid.map(col=> {
-                return col.map( tile => {
-                    return(
-                        <Square key={`${tile.x},${tile.y}`} x={tile.x} y={tile.y} />
-                    )
-                })
-            })}
+            {grid}
         </div>
     )
 }
